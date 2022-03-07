@@ -1,0 +1,142 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@100;300;400;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'DM Sans', sans-serif;
+}
+:root
+{
+  --cor-1: #00BFA6;
+  --cor-2: #171717;
+  --cor-3: #212121;
+  --cor-4: #333333;
+  --cor-5: #F9F9F9;
+  --cor-6: #6610F2;
+  /* 
+  --cor-3: rgb(78, 74, 74);
+  --cor-4: white; */
+}
+
+body
+{
+  background-color: var(--cor-2);
+  color: var(--cor-5);
+}
+#conteiner
+{
+  /* border: 1px solid red; */
+
+  width: 100%;
+ 
+  overflow: hidden;
+
+
+  /* padding: 0 50px; */
+
+  /* background-color: var(--cor-3); */
+}
+
+
+
+
+#conteiner main 
+{
+  /* border: 1px solid blue; */
+
+  width: 80%;
+
+  padding: 5% 0;
+  margin: 9vh auto;
+
+  /* background-color: var(--cor-3); */
+}
+
+#conteiner main #cards
+{
+  /* border: 1px solid orange; */
+
+  width: 100%;
+  /* height: 300px; */
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 15px 15px;
+
+  overflow: hidden;
+
+}
+
+#conteiner main #cards a 
+{
+  /* border: 1px solid orange; */
+
+  height: 270px;
+
+  text-decoration: none;
+  color: var(--cor-6);
+
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+#conteiner main #cards a:hover
+{
+  color: var(--cor-1);
+}
+
+#conteiner main #cards a #box_card
+{
+
+  width: 290px;
+  height: 100%;
+  
+  padding: 0 25px;  
+  margin-left: 15px;
+  
+  background-color: var(--cor-4);
+  border: 1px solid var(--cor-6);
+  border-radius: 8px;
+
+  text-align: center;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+
+}
+
+
+#conteiner main #cards a #box_card:hover
+{
+  border: 2px solid var(--cor-1);
+}
+
+#conteiner main #cards #box_card .img
+{
+  /* border: 1px solid orange; */
+
+  width: 60%;
+  height: 60%;
+
+  margin: 10px auto 30px auto;
+
+  background-color: var(--cor-6);
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+#conteiner main #cards #box_card .img img
+{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+

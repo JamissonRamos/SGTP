@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="css/stylePdarao.css">
+        <link rel="stylesheet" href="css/login/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="forms-container">
+
+                <div class="signin-signup">
+           
+                    <form id="formIn" class="sign-in-form">
+
+                        <h2 class="title">Fazer Login</h2>  
+
+                        <div class="input-div one">
+  
+                            <div class="i">
+
+                                <span class="material-icons"> person </span>
+                                
+                            </div> <!--Fim div i-->
+
+                            <div class="div">
+
+                                <h5>Email</h5>
+
+                                <input id="idinputEmail" type="text" name="email" class="input" autocomplete="off" data-required data-email-validate>
+
+                            </div> <!--Fim div div-->
+
+                        </div> <!--Fim div input-div one-->
+
+                        <!-- SEPARAÇÃO DOS CAMPOS -->
+
+                        <div class="input-div">
+
+                            <div class="i">
+
+                                <span class="material-icons"> lock </span>
+
+                            </div> <!--Fim div i-->
+
+                            <div class="div">
+ 
+                                <h5>Sua Senha</h5>
+
+                                <input id="idInputPassword" type="password" name="password" class="input"  data-required >
+
+                            </div> <!--Fim div div-->
+
+                        </div> <!--Fim div input-div -->
+                        
+                        <input type="submit" class="btn" value="Fazer Login">
+
+                    </form><!--Fim form formIn-->
+
+                    <!--============================================= SEPARAÇÃO DOS FORMS =============================-->
+
+                    <form id="formUp" class="sign-up-form">
+                        
+                        <h2 class="title">Criar Conta</h2>
+                        
+                        <div class="input-div one "> 
+                            
+                            <div class="i">
+                                
+                                <span class="material-icons"> person </span>
+
+                            </div><!--Fim div i-->
+                            
+                            <div class="div">
+                                
+                                <h5>Nome Completo</h5>
+
+                                <input id="idInputNomeCompleto" type="text" name="nomeCompleto" class="input" autocomplete="off" data-required data-min-length="3">
+
+                            </div> <!--Fim div div-->
+
+                        </div> <!--Fim div input-div-->
+
+                        <!--********************************* SEPARAÇÃO DOS CAMPOS ******************************-->
+
+                        <div class="input-div"> 
+                            
+                            <div class="i">
+                            
+                                <span class="material-icons"> email </span>
+
+                            </div><!--Fim div i-->
+                            
+                            <div class="div">
+                                
+                                <h5>Seu Email</h5>
+                                
+                                <input id="idInputEmailCadastro" type="text" name="emailCadastro" class="input" autocomplete="off" data-required data-min-length="5" data-email-validate>
+
+                            </div><!--Fim div div Seu Email-->
+                        
+                        </div><!--Fim div input-div -->
+
+                        <!--*********************************   SEPARAÇÃO DOS CAMPOS   ******************************-->
+
+                        <div class="input-div"> 
+
+                            <div class="i">
+
+                                <span class="material-icons"> lock </span>
+
+                            </div><!--Fim div i-->
+
+                            <div class="div">
+
+                                <h5>Senha</h5>
+
+                                <input id="idInputPasswordCds" type="password" name="senhaCadastro" class="input" autocomplete="off" data-required data-min-length="3">
+
+                            </div><!--Fim div div -->
+
+                        </div><!--Fim div input-div -->
+
+                        <!--*********************************   SEPARAÇÃO DOS CAMPOS   ******************************-->
+                    
+                        <input type="submit" class="btn" value="Criar Conta">
+
+                    </form> <!--Fim form sign-up-form-->
+
+                </div> <!--Fim div signin-signup-->
+
+            </div> <!--Fim div forms-container-->
+
+            <!--==================================   ABAIXO FICA CÓDIGO DOS PAINEL   ==============================-->
+
+            <div class="panels-container"> 
+
+                <div class="panel left-panel">
+
+                    <div class="content">
+
+                        <h3>Ainda não tem conta?</h3>
+
+                        <p>
+                            Não se preocupe, pode acessa aqui para criar sua conta.
+                        </p>
+
+                        <button class="btn transparent" id="sign-up-btn"> Criar Conta </button>
+
+                    </div> <!-- Fim da div content -->
+
+                    <img src="img/login/undraw_personal_trainer_ote3 (1).svg" class="image" alt="" />
+
+                </div> <!-- Fim da div panel left-panel-->
+
+                <!--==================================   PAINEL DO FROMS DE RECUPERAR SENHA   ===========================-->
+                
+                <div class="panel right-panel">
+
+                    <div class="content">
+
+                        <h3>Já é cadastrado ?</h3> 
+
+                        <p>
+                            Acesse aqui para efetuar seu login  
+                        </p>
+
+                        <button class="btn transparent" id="sign-in-btn"> Fazer Login </button>
+
+                    </div>  <!-- Fim da div content -->
+
+                    <img src="img/login/ft2.svg" class="image" alt="" />
+
+                </div> <!-- Fim da div panel right-panel-->
+
+            </div> <!--Fim da div panels-container -->
+
+        </div> <!--Fim div container-->
+
+       
+        <p class="msg templeteMsg">cadastro feito com sucesso!</p>
+
+        <p class="error-validation template"></p>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+        <script type="module" src="js/main_login.js"></script>
+    </body>
+</html>

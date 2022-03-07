@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGTP / Medidas </title>
+    <link rel="stylesheet" href="../css/stylePdarao.css"> <!-- Pegar o stilo do header e footer -->
+    <link rel="stylesheet" href="../css/cdsMedidas/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body class="body">
+
+    <div id="conteiner">
+
+        <header>
+            <a class="link_nav" href="home.html">
+                <div id="logo"> SGTP {} </div>
+            </a>
+            <div id="user">
+                <span> </span> 
+            </div>
+            <div class="boxMenu">
+                <button id="idBtnNovoCadastro" type="button" class="btn btn-outline-success ">
+                    <span class="material-icons"> person_add </span> 
+                    <span>Nova Medidas</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="escalaImc">
+
+                <div>
+                    <spam class="nivelImcM spam1">MENOR QUE </spam>
+                    <spam class="nivelImcM spam2">18,5</spam>
+                    <spam class="nivelImcM spam3">MAGREZA 0</spam>
+                    <spam class="nivelImcM spam4"></spam>
+                </div>
+                <div>
+                    <spam class="nivelImcN spam1">ENTRE </spam>
+                    <spam class="nivelImcN spam2">18,5 E 24,9</spam>
+                    <spam class="nivelImcN spam3">NORMAL 0</spam>
+                    <spam class="nivelImcN spam4"></spam>
+                </div>
+                <div>
+                    <spam class="nivelImcS spam1">ENTRE</spam>
+                    <spam class="nivelImcS spam2">25,0 E 29,9</spam>
+                    <spam class="nivelImcS spam3">SOBREPESO I</spam>
+                    <spam class="nivelImcS spam4"></spam>
+                </div>
+                <div>
+                    <spam class="nivelImcO spam1">ENTRE</spam>
+                    <spam class="nivelImcO spam2">30,0 E 39,9</spam>
+                    <spam class="nivelImcO spam3">OBESIDADE II</spam>
+                    <spam class="nivelImcO spam4"></spam>
+                </div>
+                <div>
+                    <spam class="nivelImcOG spam1">MAIOR QUE</spam>
+                    <spam class="nivelImcOG spam2">40,0</spam>
+                    <spam class="nivelImcOG spam3">OBESIDADE GRAVE III</spam>
+                    <spam class="nivelImcOG spam4"></spam>
+                </div>
+                
+                
+                               
+                
+            </div>
+
+            <div id="idDivTable"  class="table-responsive-sm">
+
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Peso</th>
+                            <th>Altura</th>
+                            <th>Braços</th>
+                            <th>Coxas</th>
+                            <th>Abdome</th>
+                            <th>Peito</th>
+                            <th>Valor IMC</th>
+                            <th>Status IMC</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- <tr>
+                            <th>01/03/2022</th>
+                            <th>114</th>
+                            <th>1.83</th>
+                            <th>64</th>
+                            <th>71</th>
+                            <th>121</th>
+                            <th>123</th>
+                            <th>30.04</th>
+                            <th class="nivelImcM">MAGREZA - 0</th>
+
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons md-36">mode_edit</span>
+                                </button>
+                            </td>
+                            <td><button type="button" class="btn btn-danger">
+                                <span class="material-icons">delete</span>
+                            </button></td>
+                        </tr> -->
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <form id="idFormCdsMedidas" class=" hidden row g-3 ">
+                    <div class="col-md-6">
+                        <label for="peso" class="form-label">Peso</label>
+                        <input type="text" class="form-control" id="peso" data-js="formtoMedida" data-required onblur="resultadoImc()" placeholder="Somente o número">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="altura" class="form-label">Altura</label>
+                        <input type="text" class="form-control" id="altura" data-js="formtoMedidaAltura" data-required onblur="resultadoImc()" placeholder="Somente o número">
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="bracos" class="form-label">Braços</label>
+                        <input type="text" class="form-control" id="bracos" data-js="formtoMedida" data-required placeholder="Somente o número">
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="coxas" class="form-label">Coxas</label>
+                        <input type="text" class="form-control" id="coxas"  data-js="formtoMedida" data-required placeholder="Somente o número">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="abdome" class="form-label">Abdome</label>
+                        <input type="text" class="form-control" id="abdome" data-js="formtoMedida" data-required placeholder="Somente o número">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="peito" class="form-label">Peito</label>
+                        <input type="text" class="form-control" id="peito" data-js="formtoMedida" data-required placeholder="Somente o número">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="valorImc" class="form-label">Valor IMC</label>
+                        <input  type="text" class="form-control" id="valorImc" placeholder="Preenchido automaticamente ">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="statusImc" class="form-label">Status IMC</label>
+                        <input type="text" class="form-control" id="statusImc" placeholder="Preenchido automaticamente ">
+                    </div>
+
+                    <div class="hidden">
+                        <span id="idCadastro">-1</span>
+                    </div>
+
+                    <div class="btnCss d-grid gap-2 d-md-flex justify-content-md-end ">
+                        <button id="idBtnCadastro" type="button" class="btn btn-outline-success ">
+                            <!-- <span class="material-icons"> person_add </span> -->
+                            <span id="idSpanFrm">Salvar</span>
+                        </button>
+                        <button id="idBtnFecharCds" type="button" class="btn btn-outline-danger ">
+                            <!-- <span class="material-icons">exit_to_app</span> -->
+                            <span>Cancelar</span>
+                        </button>
+
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </main>
+
+        <div id="idDivModal" class="hidden"></div>
+        
+        <footer>
+            <div>
+                <span class="title_padrao"> Sistema desenvolvido por </span>
+                <span class="title_nome"> Jamison Lira Ramos </span>
+            </div>
+        </footer>
+
+    </div> <!-- fim da div conteiner -->
+    <p class="msg templeteMsg">cadastro feito com sucesso!</p>
+    
+    <p class="error-validation template"></p>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script type="module" src="../js/main_CdsMedidas.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
